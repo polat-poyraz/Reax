@@ -30,6 +30,27 @@ class ReaxMain {
             }
         }
     }
+    viewStateDetail (){
+        let strings = {}
+        let numbers = {}
+        let booleans = {}
+        let length = 0
+        
+        for (const prop in this.state){
+            if (typeof this.state[prop] == 'string'){
+                strings[prop] = this.state[prop]
+            } else if (typeof this.state[prop] == 'number'){
+                numbers[prop] = this.state[prop]
+            } else if (typeof this.state[prop] == 'boolean'){
+                booleans[prop] = this.state[prop]
+            }
+            length++
+        }
+        console.log('allStateLength : ', length)        
+        console.log('Strings : ', strings)
+        console.log('Numbers : ', numbers)
+        console.log('Booleans : ', booleans)
+    }
     history (mode, prop){
         if (this.contetnControls.history || this.contetnControls.history === undefined){
             let after = {}
