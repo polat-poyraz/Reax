@@ -174,6 +174,38 @@ firstMethods (){
 
 Bu şekilde removeState([]) kullanarak state den veri silebiliriz ve tabiki buda geçmişe kaydedilir.
 
+# viewStateDetail()
+
+Eğer state de kaçtane string değişken var?
+kaçtane number ve boolean değişken var bunları görmek istersek
+
+``` javascript
+viewStateDetail()
+```
+fonksiyonunu kullanıyoruz.
+
+Gelin bu fonksiyonu kullnalaım
+``` javascript
+const Reax = new Reax({}, {
+    firedBefore (){
+        viewStateDetail()
+    }
+}, true)
+```
+
+sadece fonksiyonun ismini yazdırmanız yeterli sonuç konsola otomatik yazdırılır.
+
+# sonuç :
+
+``` javascript
+
+> allStateLength: 1
+> String: {title: 'Javascript'}
+> Number: {},
+> Boolean: {}
+*/
+```
+
 -----------------------------------------------------------------------------------------------------
 
 # ÖRNEK UYGULAMA
