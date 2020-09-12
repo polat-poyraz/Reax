@@ -132,12 +132,16 @@ state e message değişkenini ekledik.
 
 # removeState([])
 
-Peki state den bir değişken silmek istersek? Bunuda removeState([]) fonksiyonu ile
+Peki state den bir değişken silmek istersek? Bunuda 
+``` javascript 
+removeState([])
+``` 
+fonksiyonu ile
 yapcağız.
-removeState([]) içerisine bir array değeri alır. Bu array in içerisine state den silmek istediğiniz
+removeState() içerisine bir array değeri alır. Bu array in içerisine state den silmek istediğiniz
 değişkenlerin isimleri girilir ve remoeState state den tek tek o değişkenleri
 siler.
-Gelin removeState([]) i kullanalım.
+Gelin kullanalım.
 
 
 ``` Javascript
@@ -181,8 +185,7 @@ Uygulamamızda bir API dan veri çekelim ve bunları ekrana yazdıralım.
 Veri çekeceğimiz API adresi:
 >https://reqres.in/api/users
 
-#### NOT: Eğer API ve fetch kavramlarını bilmiyorsanız öncelikle bunları
-#### öğrenmeniz uygulamayı anlamanız açısında faydalı olur.
+#### NOT: Eğer API ve fetch kavramlarını bilmiyorsanız öncelikle bunları öğrenmeniz uygulamayı anlamanız açısında faydalı olur.
 
 #### Uygulamamıza Bootstrap ve önceden yazacağımız birkaç CSS kodu ekleyelim (ve tüm HTML kodu aşağıdadır)
 ``` html
@@ -259,7 +262,7 @@ const Reax = new ReaxMain({
            })
            .then(local => {
                Reax.state.db.map(user => {
-                   document.getElementById('users').innerHTML = (`
+                   document.getElementById('users').innerHTML += (`
                        <div class=card>
                            <div class=card-header>
                                <img src=${user.avatar} />
@@ -273,7 +276,7 @@ const Reax = new ReaxMain({
                                </ul>
                            </div>
                        </div>
-                   `) // NOT: burada normal tırnak değil `` tırnağını kullandım
+                   `) // NOT: burada '' değil `` kullandım
                })
            })
     }
@@ -286,9 +289,7 @@ Ve küçük uygulamamız bitti.
 Uygulamada API dan bir veri çekdik ve bu verinin içerisinde ki kulanıcıların
 herbirini ekrana yazdırdık.
 
-#### Bağzı javascript fonksiyonları anlatmadım çünki bu tutorial
-#### JAvascript tutorial ı değil düz Javascript dosyaları için yazılmış bir kütüphane olan
-#### Reax ın tutorialıdır.
+#### Bağzı javascript fonksiyonları anlatmadım çünki bu tutorial JAvascript tutorial ı değil düz Javascript dosyaları için yazılmış bir kütüphane olan Reax ın tutorialıdır.
 
 
 
