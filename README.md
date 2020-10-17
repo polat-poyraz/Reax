@@ -139,7 +139,7 @@ removeState([])
 fonksiyonu ile
 yapcağız.
 removeState() içerisine bir array değeri alır. Bu array in içerisine state den silmek istediğiniz
-değişkenlerin isimleri girilir ve remoeState state den tek tek o değişkenleri
+değişkenlerin isimleri girilir ve removeState state den tek tek o değişkenleri
 siler.
 Gelin kullanalım.
 
@@ -321,29 +321,6 @@ Ve küçük uygulamamız bitti.
 Uygulamada API dan bir veri çekdik ve bu verinin içerisinde ki kulanıcıların
 herbirini ekrana yazdırdık.
 
-#### Bağzı javascript fonksiyonları anlatmadım çünki bu tutorial JAvascript tutorial ı değil düz Javascript dosyaları için yazılmış bir kütüphane olan Reax ın tutorialıdır.
-
-
-
-# Hakkımda
-
-Ben Polat Poyraz 1 buçuk yıllık web front end developer ım.
-Bu kütüphaneyi yazmamdaki amaç ortaya iyi kötü birşeyler koyabilmek ve ilerde daha iyisini yapdığımda
-kendimi gözlemleyebilmek.
-Sizlerde böyle şeyler yapıp üstüne koydukca gidin ve ilerde geriye dönüp bakdığınızda
-gelişdiğiniz görün bu size iyi bir motivasyon kaynağı olur ve gelişdiğiniz daha net anlarsınız.
-iyi günler
-
-# Bildiğim teknolojiler
-1. HTML
-2. CSS
-3. SASS
-4. Bootstrap
-5. Javascript
-6. React.js
-7. Next.js
-
 Proje güncellenmeye ve geliştirilmeye açıkdır.
 
 # Reax.js
----
