@@ -1,4 +1,4 @@
-class ReaxMain {
+class Reax {
     constructor (state, methods, historyMode){
         this.contetnControls = {
             history: historyMode
@@ -71,5 +71,3 @@ class ReaxMain {
         }
     }
 }
-
-const Reax = new ReaxMain(/*state*/{}, /*methods*/{}, /*history*/true)
