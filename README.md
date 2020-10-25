@@ -9,14 +9,14 @@ Reax başlıca state, methods, history parametrelerini alır.
 İlk öncelikle Reax ı oluşturuyoruz
 
 ``` javascript
-const Reax = new ReaxMain()
+const Test = new Reax()
 ```
 
 şimdi bir Reax alanı oluşturduk
 ReaxMain'nin aldığı 3 parametreyi girelim.
 
 ``` javascript
-const Reax = new ReaxMain({},{}, true)
+const Test = new Reax({},{}, true)
 ```
 
 ReaxMain içerisine 2 obje alır.
@@ -25,7 +25,7 @@ eğer son parametreiy "true" yaparsanız geçmiş kaydedilir eğer "false" yapar
 
 ### ÖRNEK
 ``` javascript
-const Reax = new ReaxMain({
+const Test = new Reax({
     title: 'Reax.js',
 }, {
     firstMethods (){
@@ -44,7 +44,7 @@ Fire before promise yapısında olmalıdır yoksa Reax içerikleri kullanılamaz
 || ÖRNEK ||
 
 ``` javascript
-const Reax = new ReaxMain({
+const Test = new Reax({
     title: 'Reax.js',
 }, {
     firedBefore (promise){
@@ -146,11 +146,11 @@ Gelin kullanalım.
 
 ``` Javascript
 firstMethods (){
-    Reax.updateState({
+    Test.updateState({
         title: 'Javascript',
         message: 'Hello Reax'
     })
-    Reax.removeState([
+    Test.removeState([
         'message'
     ])
     console.log(Reax.state)
@@ -186,7 +186,7 @@ fonksiyonunu kullanıyoruz.
 
 Gelin bu fonksiyonu kullnalaım
 ``` javascript
-const Reax = new Reax({}, {
+const Test = new Reax({}, {
     firedBefore (){
         viewStateDetail()
     }
@@ -281,19 +281,19 @@ Eğer state den db yi konsola yazdırırsanız db nin bir array olduğunu görec
 Şimdi gelin kullanıcıları innerHTML ile tek tek ekleyelim
 
 ``` javascript
-const Reax = new ReaxMain({
+const App = new Reax({
    title: 'Reax App - 1'
 }, {
     firedBefore (promise){
        fetch('https://reqres.in/api/users')
            .then(res => res.json())
            .then(data => {
-                Reax.updateState({
+                App.updateState({
                    db: data.data
                })
            })
            .then(local => {
-               Reax.state.db.map(user => {
+               App.state.db.map(user => {
                    document.getElementById('users').innerHTML += (`
                        <div class=card>
                            <div class=card-header>
